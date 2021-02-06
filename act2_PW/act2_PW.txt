@@ -1,0 +1,215 @@
+URBE
+Julio Cesar Chacin C.I 27.197.182
+PROGRAMACION WEB N1013
+
+Realice un programa en PHP que permita realzar el calculo del área de un octágono regular con valores dinámicos.
+ACTIVITY 2 PRIMER CORTE
+
+Pagina Hosteada ==> http://rectanglecalculator1.epizy.com/
+
+index.html
+================================================================================================
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RectangleCalculator</title>
+       <link rel="stylesheet" href="css/form-style.css">
+
+</head>
+<body>
+    
+    <section class="form-register">
+       <form action="php1.php" method="POST">
+        <h4 align ="center">Calculo del Area de un Octagono</h4>
+       </br>
+       <p>Longitud de lado:</p>
+        <input class="controls" type="number" name="base" min="0" step="0.000001" required >
+        <input class="botons" type="submit" name="btn" value="Calcular">
+        <input class="botons" type="reset" name="Limpiar" value="clean">
+        <h3 align ="center">------------------------- Condiciones ------------------------</h3>
+        <p>- No es posible insertar valores negativos
+    </br>
+        - Rellena los Campos solicitados
+    </p>
+        </form>
+    </section>
+</br>
+    
+
+<footer align ="center" style="color:black">
+    -- URBE PROGRAMACION WEB | Julio Chacin, C.I 27.197.182
+</footer>
+
+</body>
+</html>
+
+
+
+php1.php
+================================================================================================
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultado</title>
+    <link rel="stylesheet" href="css/form-style.css">
+</head>
+<body>
+
+
+<style>
+    body{
+        background: #24303c;
+        color: white;
+        font-family: Roboto Thin;
+    }    
+
+    button{
+        font-family: Roboto Thin;
+        
+        width: 30%;
+         background: #1f53c5;
+        border: none;
+        padding: 12px;
+        color: white;
+        margin: 16px 0;
+        font-size: 16px;
+    }
+</style>
+
+
+<?php
+   
+
+
+   if(isset($_POST['btn']) && $_POST['btn'] == 'Calcular') {
+        $lado = $_POST['base'];
+        $area = null;
+        $perimetro = null; 
+        $apotema = null;
+
+        if(!empty($lado) or !empty($apotema)) {
+           
+            //Calcular el perimetro
+           
+            $perimetro = 8 * $lado;
+            
+            echo "<h3>Lado introducido: $lado</h3>";
+            echo "<h3>---------------------------------------------------------------------</h3>";
+            echo "<h3>PERIMETRO: $perimetro</h3>";
+            echo "<h3>---------------------------------------------------------------------</h3>";
+
+            // Calcular la apotema
+
+            $apotema = $lado * 1.207;
+            echo "<h3> APOTEMA: $apotema</h3>";
+            echo "<h3>---------------------------------------------------------------------</h3>";
+
+            // Calcular el area
+
+           echo "<h3> AREA = (PERIMETRO * APOTEMA) /2</h2>";
+           echo "<h3>---------------------------------------------------------------------</h3></br>";
+           $area = ($perimetro * $apotema)/2;
+            echo "<h3> RESULTADO: $area </h3> </br>";
+            echo "<h3>---------------------------------------------------------------------</h3>";
+
+        }
+           
+    }
+
+
+?>
+
+
+<section align ="center" color = blue>
+<h2> ¿Volver a la pagina anterior? </h2>
+<button onclick="location.href='index.html'">Si, quiero hacer otro calculo</button>
+</section>
+
+
+</body>
+</html>
+
+
+CSS
+
+form-style.css
+===============================================================================================
+
+@import url(../fonts/DINbek\ Light.ttf);
+@import url(../fonts/DINBek-Regular.ttf);
+@import url(../fonts/Roboto-Thin.ttf);
+
+body {
+  font-family: Roboto Light;
+}
+.form-register {
+  width: 400px;
+  background: #24303c;
+  padding: 30px;
+  margin: auto;
+  margin-top: 100px;
+  border-radius: 4px;
+  font-family: "Roboto Thin";
+  color: white;
+  box-shadow: 7px 13px 37px #000;
+}
+
+.form-register h4 {
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.controls {
+  width: 100%;
+  background: #24303c;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  border: 1px solid white;
+  font-family: "Roboto Thin";
+  font-size: 18px;
+  color: white;
+}
+
+.form-register p {
+  height: 40px;
+  font-size: 18px;
+  line-height: 40px;
+}
+
+.form-register a {
+  color: white;
+  text-decoration: none;
+}
+
+.form-register a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+.form-register .botons {
+  font-family: Roboto Thin;
+  width: 100%;
+  background: green;
+  border: none;
+  padding: 12px;
+  color: white;
+  margin: 16px 0;
+  font-size: 16px;
+}
+
+
+
+
+
+
+

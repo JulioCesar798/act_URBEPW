@@ -1,0 +1,83 @@
+@import url(../fonts/DINbek\ Light.ttf);
+@import url(../fonts/DINBek-Regular.ttf);
+@import url(../fonts/Roboto-Thin.ttf);
+
+body {
+  font-family: Roboto Light;
+}
+.form-register {
+  width: 400px;
+  background: #24303c;
+  padding: 30px;
+  margin: auto;
+  margin-top: 100px;
+  border-radius: 4px;
+  font-family: "Roboto Thin";
+  color: white;
+  box-shadow: 7px 13px 37px #000;
+}
+
+.form-register h4 {
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.controls {
+  width: 100%;
+  background: #24303c;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  border: 1px solid white;
+  font-family: "Roboto Thin";
+  font-size: 18px;
+  color: white;
+}
+
+.form-register p {
+  height: 40px;
+  font-size: 18px;
+  line-height: 40px;
+}
+
+.form-register a {
+  color: white;
+  text-decoration: none;
+}
+
+.form-register a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+.form-register .botons {
+  font-family: Roboto Thin;
+  width: 100%;
+  background: green;
+  border: none;
+  padding: 12px;
+  color: white;
+  margin: 16px 0;
+  font-size: 16px;
+}
+
+/*
+
+<table border="1" align ="center">
+            <tr>
+                <td>Base</td>
+                <td><input type = "number" min ="1" pattern="^[0-9]+" name="base"></td>
+            </tr>
+            <tr>   
+                <td>Altura</td>
+                <td><input type="number" min ="1" pattern="^[0-9]+" name="altura"></td>
+            </tr> 
+        </table> 
+        <table align="center">
+            <tr>
+                <td><input type="submit" name="btn" value="calcular"></td>
+                <td align="center"><input type="reset" name="Limpiar" value="clean"></td>
+            </tr>
+        </table>
+
+        */
