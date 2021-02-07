@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12345</title>
+       <link rel="stylesheet" href="css/form-style1.css">
+</head>
+
+<body>
+
+
+
+    <section class="form-register">
+       <form action="php2.php" method="POST">
+        <p>--------------------------------------------------------------------------------</p>
+        <h4 align ="center">Registro (USUARIO 1)</h4>
+        <p>--------------------------------------------------------------------------------</p>
+        </br>
+       <p>Nombre:</p>
+        <input class="controls" type="text" name="nombre" required >
+        <p>Apellido:</p>
+        <input class="controls" type="text" name="lastname" required >
+        <p>Cedula:</p>
+        <input class="controls" type="number" name="cedula" min="1" required>
+        <p>Departamento:</p>
+        <input class="controls" type="text" name="departamento" required >
+        <p>Sueldo (USD):</p>
+        <input class="controls" type="number" name="sueldo" min="1" step="0.01" required >
+        <p>Lugar de Trabajo:</p>
+        <input class="controls" type="text" name="LugarTrabajo" required>
+        </br>
+        <p>--------------------------------------------------------------------------------</p>
+        <h4 align="center">Registro (USUARIO 2) </h4>
+        <p>--------------------------------------------------------------------------------</p>
+        </br>
+        <p>Nombre:</p>
+        <input class="controls" type="text" name="nombre2" required>
+        <p>Apellido:</p>
+        <input class="controls" type="text" name="lastname2" required>
+        <p>Cedula:</p>
+        <input class="controls" type="number" name="cedula2" min="1" required>
+        <p>Departamento:</p>
+        <input class="controls" type="text" name="departamento2" required>
+        <p>Sueldo (USD):</p>
+        <input class="controls" type="number" name="sueldo2" min="1" step="0.01" required>
+        <p>Lugar de Trabajo:</p>
+        <input class="controls" type="text" name="LugarTrabajo2" required>
+        <p>--------------------------------------------------------------------------------</p>
+        <h4 align="center">Registro (USUARIO 3)</h4>
+        <p>--------------------------------------------------------------------------------</p>
+       </br>
+        <p>Nombre:</p>
+        <input class="controls" type="text" name="nombre3" required>
+        <p>Apellido:</p>
+        <input class="controls" type="text" name="lastname3" required>
+        <p>Cedula:</p>
+        <input class="controls" type="number" name="cedula3" min="1" required>
+        <p>Departamento:</p>
+        <input class="controls" type="text" name="departamento3" required>
+        <p>Sueldo (USD):</p>
+        <input class="controls" type="number" name="sueldo3" min="1" step="0.01" required>
+        <p>Lugar de Trabajo:</p>
+        <input class="controls" type="text" name="LugarTrabajo3" required>
+        <input class="botons" type="submit" name="btn" value="Guardar">
+        </br>
+
+    </br>
+        </form>
+    </section>
+</br>
+
+
+
+
+    
+
+<footer align ="center" style="color:black">
+    -- URBE PROGRAMACION WEB | Julio Chacin, C.I 27.197.182 --
+</footer>
+
+</body>
+</html>
+
+
+
+<!---
+
+// si existe un elemento de envio por post y que este boton llamado calcular
+if(isset($_POST['btn']) && $_POST ['btn'] == "calcular") {
+$base = $_POST['base'];
+$altura = $_POST ['altura'];
+$area = null;
+
+if(!empty($base) or !empty($altura)) {
+
+echo "<h2 align='center'>CALCULO DEL AREA DEL RECTANGULO</h2>";
+$area = $base * $altura;
+echo "<br>Base: " . $base;
+echo "<br>Altura: " . $altura;
+echo "<br /><br />";
+echo "<br>Area del Rectangulo: " . $area;
+echo "<br /><br />";
+echo "<a href='index.html'>Regresar</a>"; }
+}
+
+<input class="controls" type="number" step="0.01" min="0.01" name="altura" maxlength="10" requiered>
+}
+?>
+--->
