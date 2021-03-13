@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TxtEditor</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,800,900" rel="stylesheet">
+</head>
+<body>
+
+    <form action="php1.php" method="POST">
+        <div class="form">
+            <h1>Ingresa tus datos</h1>
+            <div class="grupo">
+                <input type="text" name="nombre" id="" required><span class="barra"></span>
+                <label>Nombre del Usuario</label>
+            </div>
+           
+            <div class="grupo">
+                <textarea name="direccion" id="" rows="3" required></textarea><span class="barra"></span>
+                <label>Mensaje</label>
+            </div>
+
+            <div class="grupo">
+                <input type="text" name="name_of_1txt" id="" required><span class="barra"></span>
+                <label>Nombre de tu Archivo de texto</label>
+            </div>
+
+            <div class="grupo">
+            
+            <p>Condiciones </br>Al darle un nombre a tu archivo de texto, se comprobara si existe en el servidor uno igual, si no existe, se creara un nuevo archivo de texto, bajo el nombre que sea introducido
+            </br></p>
+
+            </div>
+
+            
+            <button type="submit">Guardar, nuevo archivo de texto</button>
+        </div>
+        
+        <section align="center" color=blue>
+        </br>
+                <button onclick="location.href='index.php'">Volver a la Pagina Principal</button>
+            </section>
+
+            
+
+    </form>
+</body>
+</html>
